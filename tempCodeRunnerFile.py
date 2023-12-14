@@ -1,0 +1,1 @@
+db.vendas.insert_one(venda)

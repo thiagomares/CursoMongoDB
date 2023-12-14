@@ -1,0 +1,28 @@
+Afinal de contas, o que é o mongo DB?
+
+é o banco não relacional mais utilizado no dia a dia das empresas, que os dados inseridos são na forma json, que o formato das queries são feitos como metodos, podendo criar relações entre entidades, facilmente adaptado para diversas linguagens atraves de drivers e possuem uma grande proximidade com o js
+
+-- Principais Entidades do mongodb -- 
+
+Database: é onde ficam as coleçoes e os dados
+Collections: são como as tabelas nos bancos relacionais
+documents: são os dados no mongo DB
+
+O mongo db usa o formato bson, que nada mais é que uma variação do json, porém com mais recursos
+
+
+-- Primeiros comandos --
+Os primeiros comandos do mongo db, primeiro para conectar ao banco de dados local, é importando o metodo MongoClient, e a partir dele, utilizar o método dentro de uma variável
+
+conexao = MongoClient(host, port)
+
+Para criar a tabela que precisamos popular, basta declarar dentro de uma variavel a conexão e dentro de colchetes o nome da nova tabela que queremos guardar.
+
+e para fazer o commit destes dados, basta que enviemos ele com o método insert_one()
+Para buscar estes dados dentro da tabela, nos usamos o comando findz
+
+Para selecionar o banco de dados que queremos utilizar, basta que nos utilizemos o comando use no shell, ou quando utilizarmos os comandos no python e ja estiver passado a string de conexão do servidor, basta indicar na declaração do cursor dentro de colchetes o nome do banco de dados
+
+Não precisamos explicitamente criar uma collection, basta inserir os dados em uma que a coleção irá ser criada automaticamente. Contudo, para criar as collections, basta que utilizarmos o seguinte comando:
+
+db.<nome da coleção>.insertOne(dados) // nota mental: basicamente para criarmos qualquer coisa no mongodb, basta que nos fazer um insert nesse role
